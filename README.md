@@ -136,7 +136,7 @@ flowchart TD
    - **`2_RAGエージェントの構築_KnowledgeAssistant版.ipynb`** - Agent Bricks の Knowledge Assistant を使い、RAGパイプラインをフルマネージドで構築する版（UI手順とSDK/REST APIの両方を解説）
 
    発展ノートブック（`2_...` 実行後に取り組む）：
-   - **`参考_MLflowによるRAGエージェントの評価.ipynb`** - MLflow 3 の GenAI 評価機能を本格解説。合成データ生成・組み込み/カスタムスコアラー・`make_judge`（LLM-as-a-Judge）・プロンプトレジストリを、`mlflow.genai.evaluate` による統合評価まで一通り体験（デプロイは行わず評価にフォーカス）
+   - **`参考_MLflowによるRAGエージェントの評価.ipynb`** - MLflow 3 の GenAI 評価機能を本格解説。合成データ生成・評価データセット構築（Unity Catalog 管理）・組み込み/カスタムスコアラー・`make_judge`（LLM-as-a-Judge）・プロンプトレジストリを、`mlflow.genai.evaluate` による統合評価まで一通り体験（デプロイは行わず評価にフォーカス）
 
 3. **`3_Webアプリケーションのデプロイ.ipynb`**
    - Databricks Appsを使用したWebアプリケーションのデプロイ
