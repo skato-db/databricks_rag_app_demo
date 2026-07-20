@@ -128,10 +128,11 @@ flowchart TD
 
 2. **`2_RAGエージェントの構築.ipynb`**
    - Agent Bricks Custom Agentsを使用したRAGエージェントの実装
-   - Databricks Model Servingエンドポイントとの連携
+   - **Databricks Apps** へのデプロイ（`@invoke`/`@stream` + Databricks Asset Bundles。2026年時点の公式推奨方式）
    - エージェントのテストと評価
 
-   別解ノートブック（`2_...` の代わりに実行可能）：
+   別解・旧版ノートブック（`2_...` の代わりに実行可能）：
+   - **`2_RAGエージェントの構築_old.ipynb`** - 旧手順。エージェントを **Databricks Model Serving** エンドポイントにデプロイする方式（`agents.deploy()`）。動作はするが新規ユースケースでは非推奨
    - **`2_RAGエージェントの構築_KnowledgeAssistant版.ipynb`** - Agent Bricks の Knowledge Assistant を使い、RAGパイプラインをフルマネージドで構築する版（UI手順とSDK/REST APIの両方を解説）
 
 3. **`3_Webアプリケーションのデプロイ.ipynb`**
