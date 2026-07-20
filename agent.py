@@ -47,7 +47,7 @@ set_uc_function_client(client)
 ############################################
 # LLMエンドポイントとシステムプロンプトの定義
 ############################################
-LLM_ENDPOINT_NAME = "databricks-claude-sonnet-4"
+LLM_ENDPOINT_NAME = "databricks-claude-sonnet-4-5"
 llm = ChatDatabricks(endpoint=LLM_ENDPOINT_NAME)
 
 # システムプロンプト: エージェントの基本的な動作を定義
