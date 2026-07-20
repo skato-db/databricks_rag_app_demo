@@ -1,11 +1,11 @@
 """
 Databricks Tool-calling RAG Agent Implementation
 
-このファイルは、LangGraphとMosaic AI Agent Frameworkを使用した
+このファイルは、LangGraphとAgent Bricks Custom Agentsを使用した
 高度なTool-calling RAGエージェントの実装です。
 
 主な機能:
-- Vector Searchを活用した文書検索
+- AI Searchを活用した文書検索
 - Unity Catalog Functionとの統合
 - マルチターン会話の管理
 - ストリーミング対応
@@ -52,7 +52,7 @@ llm = ChatDatabricks(endpoint=LLM_ENDPOINT_NAME)
 
 # システムプロンプト: エージェントの基本的な動作を定義
 system_prompt = """あなたは生成AI開発に関する専門的なアシスタントです。
-登録されたVector Search Indexを活用して、
+登録されたAI Search Indexを活用して、
 ユーザーの質問に対して正確で有用な回答を提供してください。
 
 以下のガイドラインに従ってください：
@@ -69,7 +69,7 @@ system_prompt = """あなたは生成AI開発に関する専門的なアシス�
 ## エージェントツールの定義
 ## テキスト生成以外のデータ取得やアクション実行を可能にするツール群
 ## 詳細な例については以下のドキュメントを参照:
-## https://learn.microsoft.com/azure/databricks/generative-ai/agent-framework/agent-tool
+## https://learn.microsoft.com/azure/databricks/agents/agent-framework/agent-tool
 ###############################################################################
 tools = []
 
@@ -79,8 +79,8 @@ uc_tool_names = []
 uc_toolkit = UCFunctionToolkit(function_names=uc_tool_names)
 tools.extend(uc_toolkit.tools)
 
-# Vector Search Indexごとにretrieverツールを作成
-# 詳細: https://learn.microsoft.com/azure/databricks/generative-ai/agent-framework/unstructured-retrieval-tools
+# AI Search Indexごとにretrieverツールを作成
+# 詳細: https://learn.microsoft.com/azure/databricks/agents/agent-framework/unstructured-retrieval-tools
 vector_search_index_tools = [
     VectorSearchRetrieverTool(
         index_name="skato.rag_workshop.chunked_document_vs_index",

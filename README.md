@@ -18,8 +18,8 @@ flowchart TD
             WebApp["🌐 Webアプリケーション<br/>(Databricks Apps)"]
             
             subgraph "サービングエンドポイント"
-                AgentEndpoint["🤖 RAG Agent<br/>(Model Serving)"]
-                EmbedEndpoint["🧠 埋め込みモデル<br/>(Model Serving)"]
+                AgentEndpoint["🤖 RAG Agent<br/>(Databricks Model Serving)"]
+                EmbedEndpoint["🧠 埋め込みモデル<br/>(Databricks Model Serving)"]
                 LLMEndpoint["🧠 基盤モデル<br/>(Foundation Model API)"]
             end
         end
@@ -27,7 +27,7 @@ flowchart TD
         subgraph "Unity Catalog"
             Files["📄 ファイル<br/>(PDFドキュメント)"]
             Tables["📊 テーブル<br/>(chunked_documents等)"]
-            VectorIndex["🗃️ ベクトルインデックス<br/>(Vector Search)"]
+            VectorIndex["🗃️ ベクトルインデックス<br/>(AI Search)"]
             EmbedModel["🔧 埋め込みモデル<br/>(登録済みモデル)"]
             Agent["🤖 エージェント<br/>(登録済みエージェント)"]
         end
@@ -98,9 +98,9 @@ flowchart TD
 このワークショップを実行するには、以下の機能が利用可能なリージョンのDatabricksワークスペースが必要です：
 
 - **Databricks Apps**
-- **Model Serving**
-- **Vector Search**
-- **Agent Framework**
+- **Databricks Model Serving**
+- **AI Search**
+- **Agent Bricks Custom Agents**
 - **Foundation Model API**
 
 最新の対応状況については、リージョン限定の機能のドキュメント（[Azure](https://learn.microsoft.com/ja-jp/azure/databricks/resources/feature-region-support)/[AWS](https://docs.databricks.com/aws/ja/resources/feature-region-support)）をご確認ください。
@@ -124,11 +124,11 @@ flowchart TD
 1. **`1_PDFのパースとベクトルインデックスの作成.ipynb`**
    - PDFドキュメントの読み込みとテキスト抽出
    - テキストのチャンク化と前処理
-   - Vector Searchを使用したベクトルインデックスの作成
+   - AI Searchを使用したベクトルインデックスの作成
 
 2. **`2_RAGエージェントの構築.ipynb`**
-   - Agent Frameworkを使用したRAGエージェントの実装
-   - Model Servingエンドポイントとの連携
+   - Agent Bricks Custom Agentsを使用したRAGエージェントの実装
+   - Databricks Model Servingエンドポイントとの連携
    - エージェントのテストと評価
 
    別解ノートブック（`2_...` の代わりに実行可能）：
@@ -151,7 +151,7 @@ Streamlitを使用したチャットボットアプリケーションのサン�
 - `app.py` - メインアプリケーションファイル
 - `app.yaml` - Databricks Apps設定ファイル
 - `messages.py` - メッセージ処理ロジック
-- `model_serving_utils.py` - Model Servingとの連携ユーティリティ
+- `model_serving_utils.py` - Databricks Model Servingとの連携ユーティリティ
 - `requirements.txt` - Python依存関係
 
 #### その他
@@ -177,4 +177,4 @@ Streamlitを使用したチャットボットアプリケーションのサン�
 - [Databricks機能のリージョンサポート（Azure）](https://learn.microsoft.com/ja-jp/azure/databricks/resources/feature-region-support)
 - [Databricks機能のリージョンサポート（AWS）](https://docs.databricks.com/aws/ja/resources/feature-region-support#model-serving-aws)
 - [Databricks Apps ドキュメント](https://docs.databricks.com/en/dev-tools/databricks-apps/index.html)
-- [Agent Framework ドキュメント](https://docs.databricks.com/en/generative-ai/agent-framework/index.html)
+- [Agent Bricks Custom Agents ドキュメント](https://docs.databricks.com/aws/en/agents/agent-framework/build-agents)
