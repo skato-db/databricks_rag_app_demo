@@ -131,6 +131,9 @@ flowchart TD
    - Model Servingエンドポイントとの連携
    - エージェントのテストと評価
 
+   別解ノートブック（`2_...` の代わりに実行可能）：
+   - **`2_RAGエージェントの構築_KnowledgeAssistant版.ipynb`** - Agent Bricks の Knowledge Assistant を使い、RAGパイプラインをフルマネージドで構築する版（UI手順とSDK/REST APIの両方を解説）
+
 3. **`3_Webアプリケーションのデプロイ.ipynb`**
    - Databricks Appsを使用したWebアプリケーションのデプロイ
    - ユーザーインターフェースの設定
