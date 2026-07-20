@@ -128,7 +128,7 @@ flowchart TD
 
 2. **`2_RAGエージェントの構築.ipynb`**
    - Agent Bricks Custom Agentsを使用したRAGエージェントの実装
-   - **Databricks Apps** へのデプロイ（`@invoke`/`@stream` + Databricks Asset Bundles。2026年時点の公式推奨方式）
+   - **Databricks Apps** へのデプロイ（`@invoke`/`@stream` + Databricks SDK `w.apps` でノート完結。CLI 不要。2026年時点の公式推奨方式）
    - エージェントのテストと評価
 
    別解・旧版ノートブック（`2_...` の代わりに実行可能）：
